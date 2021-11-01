@@ -16,6 +16,7 @@
     "canvas": "^2.8.0",
     "date-fns": "^2.25.0",
     "dotenv": "^10.0.0",
+    "fabric-pure-browser": "^4.6.0",
     "fuse": "^0.0.8",
     "graphql": "^15.5.0",
     "he": "^1.2.0",

@@ -14,7 +14,7 @@ export default function Post({ post, site }) {
       </Head>
 
       <main>
-        <h1>{post.title}</h1>
+        <h1 className="font-black">{post.title}</h1>
 
         <div>
           <div

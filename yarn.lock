@@ -1930,6 +1930,11 @@
     "signal-exit" "^3.0.3"
     "strip-final-newline" "^2.0.0"
 
+"fabric-pure-browser@^4.6.0":
+  "integrity" "sha512-10F7gILGku+iLdJxoW53vRUfmgsOYMfpKhxu1eynpLPQZce6i9lxXIIX5ef+1h+c/lAle02iS+xpP+LcG+9yfA=="
+  "resolved" "https://registry.npmjs.org/fabric-pure-browser/-/fabric-pure-browser-4.6.0.tgz"
+  "version" "4.6.0"
+
 "fast-deep-equal@^3.1.1", "fast-deep-equal@^3.1.3":
   "integrity" "sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q=="
   "resolved" "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz"

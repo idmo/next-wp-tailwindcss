@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Brian Maggi]]></title>
+        <description><![CDATA[Product Design, Development &amp; Marketing]]></description>
+        <link>http://github.com/dylang/node-rss</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Mon, 01 Nov 2021 22:47:50 GMT</lastBuildDate>
+        <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Mon, 01 Nov 2021 22:47:50 GMT</pubDate>
+        <copyright><![CDATA[2021 Brian Maggi]]></copyright>
+        <language><![CDATA[en]]></language>
+        <item>
+            <title><![CDATA[Business Post]]></title>
+            <description><![CDATA[This is just text.
+]]></description>
+            <link>/posts/business-post</link>
+            <guid isPermaLink="false">/posts/business-post</guid>
+            <category><![CDATA[Business]]></category>
+            <category><![CDATA[Personal]]></category>
+            <dc:creator><![CDATA[Brian Maggi]]></dc:creator>
+            <pubDate>Sat, 30 Oct 2021 04:30:05 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Should designers learn to code isn’t the question we should be asking]]></title>
+            <description><![CDATA[Designers shouldn&#8217;t have to learn how to code, but they should at least give it a try. Here are some good reasons why.
+]]></description>
+            <link>/posts/should-designers-learn-to-code-isnt-the-question-we-should-be-asking</link>
+            <guid isPermaLink="false">/posts/should-designers-learn-to-code-isnt-the-question-we-should-be-asking</guid>
+            <category><![CDATA[Default]]></category>
+            <dc:creator><![CDATA[Brian Maggi]]></dc:creator>
+            <pubDate>Fri, 19 Feb 2021 14:48:34 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Adding fonts to NextJS and Tailwindcss]]></title>
+            <description><![CDATA[Here&#8217;s a way to add different fonts to your NextJS project if you&#8217;re also using Tailwindcss.
+]]></description>
+            <link>/posts/adding-fonts-to-nextjs-and-tailwindcss</link>
+            <guid isPermaLink="false">/posts/adding-fonts-to-nextjs-and-tailwindcss</guid>
+            <category><![CDATA[Default]]></category>
+            <dc:creator><![CDATA[Brian Maggi]]></dc:creator>
+            <pubDate>Fri, 19 Feb 2021 14:25:37 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

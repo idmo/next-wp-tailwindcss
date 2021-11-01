@@ -6,7 +6,7 @@ import { getApolloClient } from 'lib/apollo-client';
 
 export default function Home({ page, posts }) {
   const { title, description } = page;
-  console.log(posts);
+  console.log(title);
   return (
     <div>
       <Head>
@@ -17,29 +17,23 @@ export default function Home({ page, posts }) {
       <main>
         <h1>{title}</h1>
         <p>{description}</p>
-
-        {posts &&
-          posts.length > 0 &&
-          posts.map(({ title, excerpt, slug, path }) => {
-            return (
-              <li key={slug}>
-                <Link href={path}>
-                  <a>
-                    <h3 dangerouslySetInnerHTML={{ __html: title }} />
-                    <div dangerouslySetInnerHTML={{ __html: excerpt }} />
-                  </a>
-                </Link>
-              </li>
-            );
-          })}
-
         <ul>
-          {!posts ||
-            (posts.length === 0 && (
-              <li>
-                <p>Oops, no posts found!</p>
-              </li>
-            ))}
+          {posts &&
+            posts.length > 0 &&
+            posts.map(({ title, excerpt, slug, path, tags, categories }) => {
+              return (
+                <li key={slug} className="font-black">
+                  <Link href={path}>
+                    <a>
+                      <h3 className="font-black text-gray-400" dangerouslySetInnerHTML={{ __html: title }} />
+                      <div dangerouslySetInnerHTML={{ __html: excerpt }} />
+                    </a>
+                  </Link>
+                </li>
+              );
+            })}
+
+          {!posts || (posts.length === 0 && <p>Oops, no posts found!</p>)}
         </ul>
       </main>
     </div>
@@ -56,13 +50,37 @@ export async function getStaticProps() {
           title
           description
         }
-        posts(first: 10000) {
+        posts(first: 100000) {
           edges {
             node {
+              tags {
+                edges {
+                  node {
+                    id
+                    databaseId
+                    name
+                    link
+                    slug
+                  }
+                }
+              }
+              categories {
+                edges {
+                  node {
+                    databaseId
+                    id
+                    link
+                    name
+                    slug
+                  }
+                }
+              }
               id
-              excerpt
               title
               slug
+              excerpt
+              modifiedGmt
+              date
             }
           }
         }
@@ -90,3 +108,27 @@ export async function getStaticProps() {
     },
   };
 }
+
+const Tags = ({ tags }) => {
+  return tags.edges
+    .map(({ node }) => node)
+    .map(({ name, id, link }) => (
+      <div key={id}>
+        <Link href={link}>
+          <a>{name}</a>
+        </Link>
+      </div>
+    ));
+};
+
+const Categories = ({ categories }) => {
+  return categories.edges
+    .map(({ node }) => node)
+    .map(({ name, id, link }) => (
+      <div key={id}>
+        <Link href={link}>
+          <a>{name}</a>
+        </Link>
+      </div>
+    ));
+};

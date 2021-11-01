@@ -45,3 +45,5 @@ yarn.lock
 public
 
 .all-contributorsrc
+
+_app.js
