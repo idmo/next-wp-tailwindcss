@@ -4,100 +4,89 @@ import { gql } from '@apollo/client';
 
 import { getApolloClient } from 'lib/apollo-client';
 
-import styles from '../styles/Home.module.css';
-
 export default function Home({ page, posts }) {
-	const { title, description } = page;
-	return (
-		<div className={styles.container}>
-			<Head>
-				<title>{title}</title>
-				<meta name='description' content={description} />
-				<link rel='icon' href='/favicon.ico' />
-			</Head>
+  const { title, description } = page;
+  console.log(posts);
+  return (
+    <div>
+      <Head>
+        <title>{title}</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-			<main>
-				<h1 className={styles.title}>{title}</h1>
+      <main>
+        <h1>{title}</h1>
+        <p>{description}</p>
 
-				<p className={styles.description}>{description}</p>
+        {posts &&
+          posts.length > 0 &&
+          posts.map(({ title, excerpt, slug, path }) => {
+            return (
+              <li key={slug}>
+                <Link href={path}>
+                  <a>
+                    <h3 dangerouslySetInnerHTML={{ __html: title }} />
+                    <div dangerouslySetInnerHTML={{ __html: excerpt }} />
+                  </a>
+                </Link>
+              </li>
+            );
+          })}
 
-				<ul className={styles.grid}>
-					{posts &&
-						posts.length > 0 &&
-						posts.map((post) => {
-							return (
-								<li key={post.slug} className={styles.card}>
-									<Link href={post.path}>
-										<a>
-											<h3
-												dangerouslySetInnerHTML={{
-													__html: post.title,
-												}}
-											/>
-											<div
-												dangerouslySetInnerHTML={{
-													__html: post.excerpt,
-												}}
-											/>
-										</a>
-									</Link>
-								</li>
-							);
-						})}
-
-					{!posts ||
-						(posts.length === 0 && (
-							<li>
-								<p>Oops, no posts found!</p>
-							</li>
-						))}
-				</ul>
-			</main>
-		</div>
-	);
+        <ul>
+          {!posts ||
+            (posts.length === 0 && (
+              <li>
+                <p>Oops, no posts found!</p>
+              </li>
+            ))}
+        </ul>
+      </main>
+    </div>
+  );
 }
 
 export async function getStaticProps() {
-	const apolloClient = getApolloClient();
+  const apolloClient = getApolloClient();
 
-	const data = await apolloClient.query({
-		query: gql`
-			{
-				generalSettings {
-					title
-					description
-				}
-				posts(where: { categoryName: "Personal" }, first: 10) {
-					edges {
-						node {
-							id
-							excerpt
-							title
-							slug
-						}
-					}
-				}
-			}
-		`,
-	});
+  const data = await apolloClient.query({
+    query: gql`
+      {
+        generalSettings {
+          title
+          description
+        }
+        posts(first: 10000) {
+          edges {
+            node {
+              id
+              excerpt
+              title
+              slug
+            }
+          }
+        }
+      }
+    `,
+  });
 
-	const posts = data?.data.posts.edges
-		.map(({ node }) => node)
-		.map((post) => {
-			return {
-				...post,
-				path: `/posts/${post.slug}`,
-			};
-		});
+  const posts = data?.data.posts.edges
+    .map(({ node }) => node)
+    .map((post) => {
+      return {
+        ...post,
+        path: `/posts/${post.slug}`,
+      };
+    });
 
-	const page = {
-		...data?.data.generalSettings,
-	};
+  const page = {
+    ...data?.data.generalSettings,
+  };
 
-	return {
-		props: {
-			page,
-			posts,
-		},
-	};
+  return {
+    props: {
+      page,
+      posts,
+    },
+  };
 }

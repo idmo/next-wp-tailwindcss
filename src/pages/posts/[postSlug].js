@@ -1,41 +1,37 @@
-import Head from 'next/head'
-import Link from 'next/link'
+import Head from 'next/head';
+import Link from 'next/link';
 import { gql } from '@apollo/client';
 
 import { getApolloClient } from 'lib/apollo-client';
 
-import styles from '../../styles/Home.module.css'
-
 export default function Post({ post, site }) {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>{ post.title }</title>
+        <title>{post.title}</title>
         <meta name="description" content={`Read more about ${post.title} on ${site.title}`} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          { post.title }
-        </h1>
+      <main>
+        <h1>{post.title}</h1>
 
-        <div className={styles.grid}>
-          <div className={styles.content} dangerouslySetInnerHTML={{
-            __html: post.content
-          }} />
+        <div>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: post.content,
+            }}
+          />
         </div>
 
-        <p className={styles.backToHome}>
+        <p>
           <Link href="/">
-            <a>
-              &lt; Back to home
-            </a>
+            <a>&lt; Back to home</a>
           </Link>
         </p>
       </main>
     </div>
-  )
+  );
 }
 
 export async function getStaticProps({ params = {} } = {}) {
@@ -58,22 +54,22 @@ export async function getStaticProps({ params = {} } = {}) {
       }
     `,
     variables: {
-      slug: postSlug
-    }
+      slug: postSlug,
+    },
   });
 
   const post = data?.data.postBy;
 
   const site = {
-    ...data?.data.generalSettings
-  }
+    ...data?.data.generalSettings,
+  };
 
   return {
     props: {
       post,
-      site
-    }
-  }
+      site,
+    },
+  };
 }
 
 export async function getStaticPaths() {
@@ -101,10 +97,10 @@ export async function getStaticPaths() {
     paths: posts.map(({ slug }) => {
       return {
         params: {
-          postSlug: slug
-        }
-      }
+          postSlug: slug,
+        },
+      };
     }),
-    fallback: false
-  }
+    fallback: false,
+  };
 }

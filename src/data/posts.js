@@ -28,6 +28,16 @@ export const QUERY_ALL_POSTS = gql`
 							}
 						}
 					}
+					tags {
+						edges {
+							node {
+								databaseId
+								id
+								name
+								slug
+							}
+						}
+					}
 					content
 					date
 					excerpt
@@ -69,6 +79,16 @@ export const QUERY_POST_BY_SLUG = gql`
 			}
 			id
 			categories {
+				edges {
+					node {
+						databaseId
+						id
+						name
+						slug
+					}
+				}
+			}
+			tags {
 				edges {
 					node {
 						databaseId
@@ -236,6 +256,58 @@ export const QUERY_POST_PER_PAGE = gql`
 	query PostPerPage {
 		allSettings {
 			readingSettingsPostsPerPage
+		}
+	}
+`;
+
+export const QUERY_POSTS_BY_TAG_ID = gql`
+	query PostsByTagId($tagId: Int!) {
+		posts(where: { tagId: $tagId, hasPassword: false }) {
+			edges {
+				node {
+					author {
+						node {
+							avatar {
+								height
+								url
+								width
+							}
+							id
+							name
+							slug
+						}
+					}
+					id
+					tags {
+						edges {
+							node {
+								databaseId
+								id
+								name
+								slug
+							}
+						}
+					}
+					content
+					date
+					excerpt
+					featuredImage {
+						node {
+							altText
+							caption
+							id
+							sizes
+							sourceUrl
+							srcSet
+						}
+					}
+					modified
+					databaseId
+					title
+					slug
+					isSticky
+				}
+			}
 		}
 	}
 `;
