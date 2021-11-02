@@ -6,7 +6,7 @@ import { getApolloClient } from 'lib/apollo-client';
 
 export default function Home({ page, posts }) {
   const { title, description } = page;
-  console.log(title);
+
   return (
     <div>
       <Head>
@@ -15,17 +15,19 @@ export default function Home({ page, posts }) {
       </Head>
 
       <main>
-        <h1>{title}</h1>
-        <p>{description}</p>
+        <h1 dangerouslySetInnerHTML={{ __html: title }} />
+        <div dangerouslySetInnerHTML={{ __html: description }} />
         <ul>
           {posts &&
             posts.length > 0 &&
             posts.map(({ title, excerpt, slug, path, tags, categories }) => {
               return (
-                <li key={slug} className="font-black">
+                <li key={slug}>
+                  <Tags tags={tags} />
+                  <Categories categories={categories} />
                   <Link href={path}>
                     <a>
-                      <h3 className="font-black text-gray-400" dangerouslySetInnerHTML={{ __html: title }} />
+                      <h3 dangerouslySetInnerHTML={{ __html: title }} />
                       <div dangerouslySetInnerHTML={{ __html: excerpt }} />
                     </a>
                   </Link>
@@ -112,9 +114,9 @@ export async function getStaticProps() {
 const Tags = ({ tags }) => {
   return tags.edges
     .map(({ node }) => node)
-    .map(({ name, id, link }) => (
+    .map(({ name, id, slug }) => (
       <div key={id}>
-        <Link href={link}>
+        <Link href={`/tags/${slug}`}>
           <a>{name}</a>
         </Link>
       </div>
@@ -124,9 +126,9 @@ const Tags = ({ tags }) => {
 const Categories = ({ categories }) => {
   return categories.edges
     .map(({ node }) => node)
-    .map(({ name, id, link }) => (
+    .map(({ name, id, slug }) => (
       <div key={id}>
-        <Link href={link}>
+        <Link href={`/categories/${slug}`}>
           <a>{name}</a>
         </Link>
       </div>
