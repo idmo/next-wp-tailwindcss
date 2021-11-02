@@ -1,22 +1,34 @@
-# Next.js WordPress Starter
 
-## ⚡️ Quick Start
+# NextJS, Tailwindcss, WordPress Starter
 
-### Requirements
+A foundational starter for using WordPress as a Headless CMS with NextJS and Tailwindcss.
 
-* [WordPress](https://wordpress.org/)
-* [WPGraphQL](https://www.wpgraphql.com/)
+The goal of this starter is to enable the creation of multiple sites using NextJS and Tailwindcss for the presentation layer and WordPress as a single Headless CMS for all the sites.
 
-```bash
-yarn create next-app -e https://github.com/colbyfayock/next-wpgraphql-basic-starter
-# or
-npx create-next-app -e https://github.com/colbyfayock/next-wpgraphql-basic-starter
-```
+## Presentation Layer
+I wanted the developer experience of NextJS and Tailwindcss to create the templates for standardized pages like blog posts.
 
-Add an `.env.local` file to the root with the following:
+## Headless CMS
+If you've ever managed more than one WordPress site, you know what a PITA they can be. Enough said.
 
-```bash
-WORDPRESS_GRAPHQL_ENDPOINT="http://yourhost.com/graphql"
-```
+## Goals
+I just want to be able to create multiple sites using one instance of WordPress. Second, I want to be able to post things to the blog from anywhere whether it's a laptop or iPad. More complex pages etc. will be done on at the desktop.
+## Acknowledgements
 
-I wanted to create a starter for NextJS and WordPress that would enable me to use one instance of a headless CMS to serve multiple sites. I didn't want replicate the one big problem I have with WP – it's tight integration with the presentation layer. WP is amazing at managing content, but customizing the presentation is a royal pain in my ass.
+ - [Based on the awesome WP Starter from Colby Fayock](https://github.com/colbyfayock/next-wordpress-starter)
+
+
+## Authors
+
+- [@idmo](https://github.com/idmo)
+
+
+## Features
+
+It's pretty featureless. It's only function is to pull Wordpress site by Posts, Tags, and Categories. You can do the rest like creating Components.
+
+## FAQ
+
+#### Where are the Components?
+
+There aren't any. The point of this starter is to get the most fundamental features of WordPress working with NextJS and Tailwindss. Those features are Posts, Tags, and Categories.
