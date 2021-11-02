@@ -322,7 +322,7 @@ export function mapPostData(post = {}) {
   // Clean up the tags to make them more easy to access
 
   if (data.tags) {
-    data.tags = data.categories.edges.map(({ node }) => {
+    data.tags = data.tags.edges.map(({ node }) => {
       return {
         ...node,
       };

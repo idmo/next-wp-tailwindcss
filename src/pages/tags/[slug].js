@@ -1,17 +1,16 @@
 import { getAllTags, getTagBySlug } from 'lib/tags';
-import { getPostsByTagSlug } from 'lib/posts';
+import { getPostsByTagId } from 'lib/posts';
 
 export default function Tag({ tag, posts }) {
-  console.log(posts);
   const { name, description } = tag;
-
+  console.log(posts);
   return (
     <div>
-      <h1 className="text-xl font-black">{name}</h1>
+      <h1>{name}</h1>
       <div dangerouslySetInnerHTML={{ __html: description }}></div>
       <ol>
         {posts.map(({ title, id }) => (
-          <li className="border-b border-black" key={id} dangerouslySetInnerHTML={{ __html: title }} />
+          <li key={id} dangerouslySetInnerHTML={{ __html: title }} />
         ))}
       </ol>
     </div>
@@ -20,7 +19,11 @@ export default function Tag({ tag, posts }) {
 
 export async function getStaticProps({ params = {} } = {}) {
   const { tag } = await getTagBySlug(params?.slug);
-  const { posts } = await getPostsByTagSlug(tag.slug);
+
+  // use the Tag ID because it's a string
+  // for some reason a Tag ID is a string,
+  // a caterogy is an Int in Graphql
+  const { posts } = await getPostsByTagId(tag.id);
 
   return {
     props: {

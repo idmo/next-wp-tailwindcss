@@ -6,11 +6,11 @@ export default function Category({ category, posts }) {
 
   return (
     <div>
-      <h1 className="text-xl font-black">{name}</h1>
+      <h1>{name}</h1>
       <div dangerouslySetInnerHTML={{ __html: description }}></div>
       <ol>
         {posts.map(({ title, id }) => (
-          <li className="border-b border-black" key={id} dangerouslySetInnerHTML={{ __html: title }} />
+          <li key={id} dangerouslySetInnerHTML={{ __html: title }} />
         ))}
       </ol>
     </div>
@@ -18,8 +18,11 @@ export default function Category({ category, posts }) {
 }
 
 export async function getStaticProps({ params = {} } = {}) {
-  console.log(params);
   const { category } = await getCategoryBySlug(params?.slug);
+
+  // use the Category DatabaseId because it's an Integer
+  // for some reason a Category ID is a Int,
+  // a tag is a String in Graphql
   const { posts } = await getPostsByCategoryId(category.databaseId);
 
   return {
