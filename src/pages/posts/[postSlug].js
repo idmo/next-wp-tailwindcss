@@ -3,34 +3,24 @@ import Link from 'next/link';
 import { gql } from '@apollo/client';
 
 import { getApolloClient } from 'lib/apollo-client';
+import { Fragment } from 'react';
 
 export default function Post({ post, site }) {
   return (
-    <div>
+    <Fragment>
       <Head>
         <title>{post.title}</title>
         <meta name="description" content={`Read more about ${post.title} on ${site.title}`} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main>
-        <h1>{post.title}</h1>
-
-        <div>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: post.content,
-            }}
-          />
-        </div>
-
-        <p>
-          <Link href="/">
-            <a>&lt; Back to home</a>
-          </Link>
-        </p>
-      </main>
-    </div>
+      <div className="text-3xl font-black">Post Slug Page</div>
+      <div>
+        <div>{JSON.stringify(site)}</div>
+      </div>
+      <div>
+        <div>{JSON.stringify(post)}</div>
+      </div>
+    </Fragment>
   );
 }
 

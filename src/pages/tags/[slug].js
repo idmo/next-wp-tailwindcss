@@ -1,19 +1,22 @@
 import { getAllTags, getTagBySlug } from 'lib/tags';
 import { getPostsByTagId } from 'lib/posts';
+import { Fragment } from 'react';
 
 export default function Tag({ tag, posts }) {
   const { name, description } = tag;
-  console.log(posts);
+  console.log(JSON.stringify(posts));
   return (
-    <div>
-      <h1>{name}</h1>
-      <div dangerouslySetInnerHTML={{ __html: description }}></div>
-      <ol>
-        {posts.map(({ title, id }) => (
-          <li key={id} dangerouslySetInnerHTML={{ __html: title }} />
-        ))}
-      </ol>
-    </div>
+    <Fragment>
+      <div className="text-3xl font-black">This is a Tag Listing Page</div>
+      <div>
+        <div>{name}</div>
+        <div>{description}</div>
+      </div>
+      <div>
+        <div>Raw Content</div>
+        <div>{JSON.stringify(posts)}</div>
+      </div>
+    </Fragment>
   );
 }
 
