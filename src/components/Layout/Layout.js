@@ -1,10 +1,11 @@
 import { useRouter } from 'next/router';
 import { Helmet } from 'react-helmet';
-
+import Link from 'next/link';
 import useSite from '../../hooks/use-site';
 import { helmetSettingsFromMetadata } from '../../lib/site';
 
-import Footer from 'components/Footer';
+import Footer from '../Footer';
+import Nav from '../Nav';
 
 const Layout = ({ children }) => {
   const router = useRouter();
@@ -60,8 +61,15 @@ const Layout = ({ children }) => {
   return (
     <div>
       <Helmet {...helmetSettings} />
-      <div className="w-2/3 mx-auto prose">{children}</div>
-      <Footer />
+      <div className="mx-auto w-[960px]">
+        <Nav />
+        <div className="h-full prose">{children}</div>
+      </div>
+      <div className="py-4">
+        <div className="mx-auto w-[960px]">
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 };

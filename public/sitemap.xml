@@ -1,55 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc></loc>
-    <lastmod>2021-11-02T15:44:21.355Z</lastmod>
+    <loc>https://idmo.io</loc>
+    <lastmod>2021-11-03T05:35:17.684Z</lastmod>
   </url>
   <url>
-    <loc>/newsletter</loc>
+    <loc>https://idmo.io/newsletter</loc>
     <priority>0.3</priority>
     <lastmod>2021-02-16T08:36:32.000Z</lastmod>
   </url>
   <url>
-    <loc>/events</loc>
+    <loc>https://idmo.io/events</loc>
     <priority>0.3</priority>
     <lastmod>2021-02-16T08:34:55.000Z</lastmod>
   </url>
   <url>
-    <loc>/contact</loc>
+    <loc>https://idmo.io/contact</loc>
     <priority>0.3</priority>
     <lastmod>2021-01-27T07:04:33.000Z</lastmod>
   </url>
   <url>
-    <loc>/the-beginners-guide-to-headless-cms</loc>
+    <loc>https://idmo.io/the-beginners-guide-to-headless-cms</loc>
     <priority>0.3</priority>
     <lastmod>2021-01-26T23:37:50.000Z</lastmod>
   </url>
   <url>
-    <loc>/about</loc>
+    <loc>https://idmo.io/about</loc>
     <priority>0.3</priority>
-    <lastmod>2021-01-26T23:03:28.000Z</lastmod>
+    <lastmod>2021-11-03T05:49:43.000Z</lastmod>
   </url>
   <url>
-    <loc>/terms-conditions</loc>
+    <loc>https://idmo.io/terms-conditions</loc>
     <priority>0.3</priority>
     <lastmod>2021-01-26T12:53:08.000Z</lastmod>
   </url>
   <url>
-    <loc>/privacy-policy</loc>
+    <loc>https://idmo.io/privacy-policy</loc>
     <priority>0.3</priority>
     <lastmod>2021-01-26T12:53:32.000Z</lastmod>
   </url>
 
   <url>
-    <loc>/posts/business-post</loc>
-    <lastmod>2021-11-02T12:43:19.000Z</lastmod>
+    <loc>https://idmo.io/posts/test-hook-from-ipad</loc>
+    <lastmod>2021-11-03T09:54:34.000Z</lastmod>
   </url>
   <url>
-    <loc>/posts/should-designers-learn-to-code-isnt-the-question-we-should-be-asking</loc>
-    <lastmod>2021-02-19T14:48:34.000Z</lastmod>
+    <loc>https://idmo.io/posts/testing-the-hook</loc>
+    <lastmod>2021-11-03T08:49:32.000Z</lastmod>
   </url>
   <url>
-    <loc>/posts/adding-fonts-to-nextjs-and-tailwindcss</loc>
-    <lastmod>2021-02-19T14:25:37.000Z</lastmod>
+    <loc>https://idmo.io/posts/more-to-the-fire</loc>
+    <lastmod>2021-11-03T08:24:41.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://idmo.io/posts/first-idmo-post</loc>
+    <lastmod>2021-11-03T08:24:58.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://idmo.io/posts/this-is-idmo-only</loc>
+    <lastmod>2021-11-03T08:25:12.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://idmo.io/posts/this-is-a-private-business-test</loc>
+    <lastmod>2021-11-03T08:25:19.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://idmo.io/posts/business-post</loc>
+    <lastmod>2021-11-03T03:14:47.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://idmo.io/posts/should-designers-learn-to-code-isnt-the-question-we-should-be-asking</loc>
+    <lastmod>2021-11-03T03:14:19.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://idmo.io/posts/adding-fonts-to-nextjs-and-tailwindcss</loc>
+    <lastmod>2021-11-03T03:14:06.000Z</lastmod>
   </url>
 </urlset>
