@@ -1,5 +1,8 @@
 {
   "name": "demo-nextjs-wpgraphql-starter",
+  "homepage": "https://idmo.io",
+  "copyright": "2021 All Rights Reserved",
+  "site": "IDMO",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,7 +16,9 @@
   },
   "dependencies": {
     "@apollo/client": "^3.3.20",
-    "canvas": "^2.8.0",
+    "@heroicons/react": "^1.0.5",
+    "@tailwindcss/typography": "^0.4.1",
+    "canvas": "^2.6.1",
     "date-fns": "^2.25.0",
     "dotenv": "^10.0.0",
     "fabric-pure-browser": "^4.6.0",

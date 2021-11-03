@@ -2,19 +2,37 @@
     <channel>
         <title><![CDATA[Brian Maggi]]></title>
         <description><![CDATA[Product Design, Development &amp; Marketing]]></description>
-        <link>http://github.com/dylang/node-rss</link>
+        <link>https://idmo.io</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 03 Nov 2021 01:28:04 GMT</lastBuildDate>
-        <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Wed, 03 Nov 2021 01:28:04 GMT</pubDate>
+        <lastBuildDate>Wed, 03 Nov 2021 05:35:17 GMT</lastBuildDate>
+        <atom:link href="https://idmo.io/feed.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Wed, 03 Nov 2021 05:35:17 GMT</pubDate>
         <copyright><![CDATA[2021 Brian Maggi]]></copyright>
         <language><![CDATA[en]]></language>
+        <item>
+            <title><![CDATA[Test hook from iPad]]></title>
+            <link>https://idmo.io/posts/test-hook-from-ipad</link>
+            <guid isPermaLink="false">https://idmo.io/posts/test-hook-from-ipad</guid>
+            <category><![CDATA[Default]]></category>
+            <dc:creator><![CDATA[Brian Maggi]]></dc:creator>
+            <pubDate>Wed, 03 Nov 2021 09:54:33 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Testing the Hook]]></title>
+            <description><![CDATA[Let&#8217;s see if it publishes this post.
+]]></description>
+            <link>https://idmo.io/posts/testing-the-hook</link>
+            <guid isPermaLink="false">https://idmo.io/posts/testing-the-hook</guid>
+            <category><![CDATA[Business]]></category>
+            <dc:creator><![CDATA[Brian Maggi]]></dc:creator>
+            <pubDate>Wed, 03 Nov 2021 08:47:13 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[More to the fire]]></title>
             <description><![CDATA[This is a second post
 ]]></description>
-            <link>/posts/more-to-the-fire</link>
-            <guid isPermaLink="false">/posts/more-to-the-fire</guid>
+            <link>https://idmo.io/posts/more-to-the-fire</link>
+            <guid isPermaLink="false">https://idmo.io/posts/more-to-the-fire</guid>
             <category><![CDATA[Default]]></category>
             <dc:creator><![CDATA[Brian Maggi]]></dc:creator>
             <pubDate>Wed, 03 Nov 2021 04:02:46 GMT</pubDate>
@@ -23,8 +41,8 @@
             <title><![CDATA[First IDMO Post]]></title>
             <description><![CDATA[I&#8217;m testing ACF.
 ]]></description>
-            <link>/posts/first-idmo-post</link>
-            <guid isPermaLink="false">/posts/first-idmo-post</guid>
+            <link>https://idmo.io/posts/first-idmo-post</link>
+            <guid isPermaLink="false">https://idmo.io/posts/first-idmo-post</guid>
             <category><![CDATA[Default]]></category>
             <dc:creator><![CDATA[Brian Maggi]]></dc:creator>
             <pubDate>Wed, 03 Nov 2021 00:35:42 GMT</pubDate>
@@ -33,8 +51,8 @@
             <title><![CDATA[This is IDMO Only]]></title>
             <description><![CDATA[Testing out the ACF plug-in
 ]]></description>
-            <link>/posts/this-is-idmo-only</link>
-            <guid isPermaLink="false">/posts/this-is-idmo-only</guid>
+            <link>https://idmo.io/posts/this-is-idmo-only</link>
+            <guid isPermaLink="false">https://idmo.io/posts/this-is-idmo-only</guid>
             <category><![CDATA[Default]]></category>
             <dc:creator><![CDATA[Brian Maggi]]></dc:creator>
             <pubDate>Wed, 03 Nov 2021 00:19:16 GMT</pubDate>
@@ -43,8 +61,8 @@
             <title><![CDATA[This is a Private Business Test]]></title>
             <description><![CDATA[Now I type.
 ]]></description>
-            <link>/posts/this-is-a-private-business-test</link>
-            <guid isPermaLink="false">/posts/this-is-a-private-business-test</guid>
+            <link>https://idmo.io/posts/this-is-a-private-business-test</link>
+            <guid isPermaLink="false">https://idmo.io/posts/this-is-a-private-business-test</guid>
             <category><![CDATA[Business]]></category>
             <category><![CDATA[_Private]]></category>
             <dc:creator><![CDATA[Brian Maggi]]></dc:creator>
@@ -54,8 +72,8 @@
             <title><![CDATA[Business Post]]></title>
             <description><![CDATA[This is just text. I am practicing writing on an iPad. Let&#8217;s see how this turns out. Maybe I should add some images. Now I&#8217;m back to writing text. This isn&#8217;t bad on the iPad.
 ]]></description>
-            <link>/posts/business-post</link>
-            <guid isPermaLink="false">/posts/business-post</guid>
+            <link>https://idmo.io/posts/business-post</link>
+            <guid isPermaLink="false">https://idmo.io/posts/business-post</guid>
             <category><![CDATA[Business]]></category>
             <category><![CDATA[_Private]]></category>
             <dc:creator><![CDATA[Brian Maggi]]></dc:creator>
@@ -65,8 +83,8 @@
             <title><![CDATA[Should designers learn to code isn’t the question we should be asking]]></title>
             <description><![CDATA[Designers shouldn&#8217;t have to learn how to code, but they should at least give it a try. Here are some good reasons why.
 ]]></description>
-            <link>/posts/should-designers-learn-to-code-isnt-the-question-we-should-be-asking</link>
-            <guid isPermaLink="false">/posts/should-designers-learn-to-code-isnt-the-question-we-should-be-asking</guid>
+            <link>https://idmo.io/posts/should-designers-learn-to-code-isnt-the-question-we-should-be-asking</link>
+            <guid isPermaLink="false">https://idmo.io/posts/should-designers-learn-to-code-isnt-the-question-we-should-be-asking</guid>
             <category><![CDATA[Default]]></category>
             <dc:creator><![CDATA[Brian Maggi]]></dc:creator>
             <pubDate>Fri, 19 Feb 2021 14:48:34 GMT</pubDate>
@@ -75,8 +93,8 @@
             <title><![CDATA[Adding fonts to NextJS and Tailwindcss]]></title>
             <description><![CDATA[Here&#8217;s a way to add different fonts to your NextJS project if you&#8217;re also using Tailwindcss.
 ]]></description>
-            <link>/posts/adding-fonts-to-nextjs-and-tailwindcss</link>
-            <guid isPermaLink="false">/posts/adding-fonts-to-nextjs-and-tailwindcss</guid>
+            <link>https://idmo.io/posts/adding-fonts-to-nextjs-and-tailwindcss</link>
+            <guid isPermaLink="false">https://idmo.io/posts/adding-fonts-to-nextjs-and-tailwindcss</guid>
             <category><![CDATA[Default]]></category>
             <dc:creator><![CDATA[Brian Maggi]]></dc:creator>
             <pubDate>Fri, 19 Feb 2021 14:25:37 GMT</pubDate>
