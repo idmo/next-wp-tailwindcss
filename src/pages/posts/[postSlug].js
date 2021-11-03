@@ -1,13 +1,11 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import { gql } from '@apollo/client';
-
 import { getApolloClient } from 'lib/apollo-client';
-import { Fragment } from 'react';
+import Layout from 'components/Layout';
 
 export default function Post({ post, site }) {
   return (
-    <Fragment>
+    <Layout>
       <Head>
         <title>{post.title}</title>
         <meta name="description" content={`Read more about ${post.title} on ${site.title}`} />
@@ -20,7 +18,7 @@ export default function Post({ post, site }) {
       <div>
         <div>{JSON.stringify(post)}</div>
       </div>
-    </Fragment>
+    </Layout>
   );
 }
 

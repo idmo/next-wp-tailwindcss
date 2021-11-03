@@ -1,12 +1,12 @@
 import { getAllTags, getTagBySlug } from 'lib/tags';
 import { getPostsByTagId } from 'lib/posts';
-import { Fragment } from 'react';
+import Layout from 'components/Layout';
 
 export default function Tag({ tag, posts }) {
   const { name, description } = tag;
   console.log(JSON.stringify(posts));
   return (
-    <Fragment>
+    <Layout>
       <div className="text-3xl font-black">This is a Tag Listing Page</div>
       <div>
         <div>{name}</div>
@@ -16,7 +16,7 @@ export default function Tag({ tag, posts }) {
         <div>Raw Content</div>
         <div>{JSON.stringify(posts)}</div>
       </div>
-    </Fragment>
+    </Layout>
   );
 }
 

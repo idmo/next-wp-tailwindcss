@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { gql } from '@apollo/client';
+import Layout from 'components/Layout';
 
 import { getApolloClient } from 'lib/apollo-client';
 
@@ -8,37 +9,35 @@ export default function Home({ page, posts }) {
   const { title, description } = page;
 
   return (
-    <div>
+    <Layout>
       <Head>
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1 dangerouslySetInnerHTML={{ __html: title }} />
-        <div dangerouslySetInnerHTML={{ __html: description }} />
-        <ul>
-          {posts &&
-            posts.length > 0 &&
-            posts.map(({ title, excerpt, slug, path, tags, categories }) => {
-              return (
-                <li key={slug}>
-                  <Tags tags={tags} />
-                  <Categories categories={categories} />
-                  <Link href={path}>
-                    <a>
-                      <h3 dangerouslySetInnerHTML={{ __html: title }} />
-                      <div dangerouslySetInnerHTML={{ __html: excerpt }} />
-                    </a>
-                  </Link>
-                </li>
-              );
-            })}
+      <h1 dangerouslySetInnerHTML={{ __html: title }} />
+      <div dangerouslySetInnerHTML={{ __html: description }} />
+      <ul>
+        {posts &&
+          posts.length > 0 &&
+          posts.map(({ title, excerpt, slug, path, tags, categories }) => {
+            return (
+              <li key={slug}>
+                <Tags tags={tags} />
+                <Categories categories={categories} />
+                <Link href={path}>
+                  <a>
+                    <h3 dangerouslySetInnerHTML={{ __html: title }} />
+                    <div dangerouslySetInnerHTML={{ __html: excerpt }} />
+                  </a>
+                </Link>
+              </li>
+            );
+          })}
 
-          {!posts || (posts.length === 0 && <p>Oops, no posts found!</p>)}
-        </ul>
-      </main>
-    </div>
+        {!posts || (posts.length === 0 && <p>Oops, no posts found!</p>)}
+      </ul>
+    </Layout>
   );
 }
 

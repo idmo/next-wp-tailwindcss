@@ -1,12 +1,12 @@
+import Layout from 'components/Layout';
 import { getAllCategories, getCategoryBySlug } from 'lib/categories';
 import { getPostsByCategoryId } from 'lib/posts';
-import { Fragment } from 'react';
 
 export default function Category({ category, posts }) {
   const { name, description } = category;
   console.log(JSON.stringify(posts));
   return (
-    <Fragment>
+    <Layout>
       <div className="text-3xl font-black">This is a Category Listing Page</div>
       <div>
         <div>{name}</div>
@@ -16,7 +16,7 @@ export default function Category({ category, posts }) {
         <div>Raw Content</div>
         <div>{JSON.stringify(posts)}</div>
       </div>
-    </Fragment>
+    </Layout>
   );
 }
 

@@ -1,8 +1,13 @@
 import { getRecentPosts } from 'lib/posts';
 import Posts from '../../components/Posts';
+import Layout from 'components/Layout';
 
 const Blog = ({ posts }) => {
-  return <Posts posts={posts} />;
+  return (
+    <Layout>
+      <Posts posts={posts} />
+    </Layout>
+  );
 };
 
 export default Blog;
