@@ -4,11 +4,52 @@
         <description><![CDATA[Product Design, Development &amp; Marketing]]></description>
         <link>http://github.com/dylang/node-rss</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 02 Nov 2021 16:19:41 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 03 Nov 2021 01:28:04 GMT</lastBuildDate>
         <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 02 Nov 2021 16:19:41 GMT</pubDate>
+        <pubDate>Wed, 03 Nov 2021 01:28:04 GMT</pubDate>
         <copyright><![CDATA[2021 Brian Maggi]]></copyright>
         <language><![CDATA[en]]></language>
+        <item>
+            <title><![CDATA[More to the fire]]></title>
+            <description><![CDATA[This is a second post
+]]></description>
+            <link>/posts/more-to-the-fire</link>
+            <guid isPermaLink="false">/posts/more-to-the-fire</guid>
+            <category><![CDATA[Default]]></category>
+            <dc:creator><![CDATA[Brian Maggi]]></dc:creator>
+            <pubDate>Wed, 03 Nov 2021 04:02:46 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[First IDMO Post]]></title>
+            <description><![CDATA[I&#8217;m testing ACF.
+]]></description>
+            <link>/posts/first-idmo-post</link>
+            <guid isPermaLink="false">/posts/first-idmo-post</guid>
+            <category><![CDATA[Default]]></category>
+            <dc:creator><![CDATA[Brian Maggi]]></dc:creator>
+            <pubDate>Wed, 03 Nov 2021 00:35:42 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[This is IDMO Only]]></title>
+            <description><![CDATA[Testing out the ACF plug-in
+]]></description>
+            <link>/posts/this-is-idmo-only</link>
+            <guid isPermaLink="false">/posts/this-is-idmo-only</guid>
+            <category><![CDATA[Default]]></category>
+            <dc:creator><![CDATA[Brian Maggi]]></dc:creator>
+            <pubDate>Wed, 03 Nov 2021 00:19:16 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[This is a Private Business Test]]></title>
+            <description><![CDATA[Now I type.
+]]></description>
+            <link>/posts/this-is-a-private-business-test</link>
+            <guid isPermaLink="false">/posts/this-is-a-private-business-test</guid>
+            <category><![CDATA[Business]]></category>
+            <category><![CDATA[_Private]]></category>
+            <dc:creator><![CDATA[Brian Maggi]]></dc:creator>
+            <pubDate>Wed, 03 Nov 2021 00:15:03 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Business Post]]></title>
             <description><![CDATA[This is just text. I am practicing writing on an iPad. Let&#8217;s see how this turns out. Maybe I should add some images. Now I&#8217;m back to writing text. This isn&#8217;t bad on the iPad.
@@ -16,7 +57,7 @@
             <link>/posts/business-post</link>
             <guid isPermaLink="false">/posts/business-post</guid>
             <category><![CDATA[Business]]></category>
-            <category><![CDATA[Personal]]></category>
+            <category><![CDATA[_Private]]></category>
             <dc:creator><![CDATA[Brian Maggi]]></dc:creator>
             <pubDate>Sat, 30 Oct 2021 04:30:05 GMT</pubDate>
         </item>
