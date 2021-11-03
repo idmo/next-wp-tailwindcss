@@ -1,4 +1,4 @@
-import Link from 'link/next';
+import Link from 'next/link';
 import config from '../../../package.json';
 
 import { Helmet } from 'react-helmet';
@@ -11,8 +11,8 @@ const { homepage = ' ' } = config;
 const Pagination = ({ pagesCount, currentPage, basePath, addCanonical = true }) => {
   const path = `${basePath}/page/`;
 
-  const hasPreviousPage = pageCount > 1 && currentPage > 1;
-  const hasNextPage = pageCount > 1 && currentPage < pageCount;
+  const hasPreviousPage = pagesCount > 1 && currentPage > 1;
+  const hasNextPage = pagesCount > 1 && currentPage < pagesCount;
 
   let hasPrevDots = false;
   let hasNextDots = false;
