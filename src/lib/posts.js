@@ -3,6 +3,9 @@ import { getApolloClient } from 'lib/apollo-client';
 import { updateUserAvatar } from 'lib/users';
 import { sortObjectsByDate } from 'lib/datetime';
 
+import config from '../../package.json';
+const { site } = config;
+
 import {
   QUERY_ALL_POSTS,
   QUERY_POST_BY_SLUG,
@@ -123,6 +126,9 @@ export async function getAllPosts() {
 
   const data = await apolloClient.query({
     query: QUERY_ALL_POSTS,
+    variables: {
+      site,
+    },
   });
 
   const posts = data?.data.posts.edges.map(({ node = {} }) => node);

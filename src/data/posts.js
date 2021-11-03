@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
 
 export const QUERY_ALL_POSTS = gql`
-  query AllPosts($site: String = "IDMO") {
+  query AllPosts($site: String!) {
     posts(where: { site: $site, hasPassword: false }, first: 10) {
       edges {
         node {
