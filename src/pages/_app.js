@@ -60,6 +60,7 @@ App.getInitialProps = async function (appContext) {
     metadata: await getSiteMetadata(),
     recentPosts,
     categories,
+    tags,
     menus,
   };
 };

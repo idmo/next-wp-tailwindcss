@@ -88,6 +88,16 @@ export const QUERY_POST_BY_SLUG = gql`
           }
         }
       }
+      tags {
+        edges {
+          node {
+            databaseId
+            id
+            name
+            slug
+          }
+        }
+      }
       content
       date
       excerpt
@@ -129,6 +139,16 @@ export const QUERY_POSTS_BY_CATEGORY_ID = gql`
           }
           id
           categories {
+            edges {
+              node {
+                databaseId
+                id
+                name
+                slug
+              }
+            }
+          }
+          tags {
             edges {
               node {
                 databaseId
@@ -219,6 +239,16 @@ export const QUERY_POSTS_BY_AUTHOR_SLUG = gql`
     posts(where: { authorName: $slug, hasPassword: false }) {
       edges {
         node {
+          tags {
+            edges {
+              node {
+                databaseId
+                id
+                name
+                slug
+              }
+            }
+          }
           categories {
             edges {
               node {

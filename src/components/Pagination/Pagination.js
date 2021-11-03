@@ -50,7 +50,7 @@ const Pagination = ({ pagesCount, currentPage, basePath, addCanonical = true }) 
         {hasNextPage && <link rel="next" href={`${homepage}${path}${currentPage + 1}`} />}
       </Helmet>
 
-      <nav role="navigation" aria-lable="Pagination Navigation">
+      <nav role="navigation" aria-label="Pagination Navigation">
         {hasPreviousPage && (
           <Link href={`${path}${currentPage - 1}`}>
             <a aria-label="Goto Previous Page">Previous</a>

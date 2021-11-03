@@ -22,7 +22,7 @@ import {
  */
 
 export function postPathBySlug(slug) {
-  return `/posts/${slug}`;
+  return `/blog/${slug}`;
 }
 
 /**

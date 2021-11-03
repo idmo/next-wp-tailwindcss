@@ -5,7 +5,7 @@ import { postPathBySlug, sanitizeExcerpt } from '../../lib/posts';
 import Metadata from '../../components/Metadata';
 
 const PostCard = ({ post, options = {} }) => {
-  const { title, excerpt, slug, date, author, categories, isSticky = false } = post;
+  const { title, excerpt, slug, date, author, categories, tags, isSticky = false } = post;
   const { excludeMetadata = [] } = options;
 
   const metadata = {};
@@ -20,6 +20,10 @@ const PostCard = ({ post, options = {} }) => {
 
   if (!excludeMetadata.includes('categories')) {
     metadata.categories = categories;
+  }
+
+  if (!excludeMetadata.includes('tags')) {
+    metadata.tags = tags;
   }
 
   if (isSticky) {
