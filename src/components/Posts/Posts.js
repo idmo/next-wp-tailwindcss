@@ -9,7 +9,7 @@ const Posts = ({ posts }) => {
 };
 
 const Post = ({ post }) => {
-  const { title, content, tags, categories, date, isSticky, author } = post;
+  const { title, content, tags, categories, isSticky } = post;
   return (
     <Fragment>
       {isSticky && 'Sticky'}
