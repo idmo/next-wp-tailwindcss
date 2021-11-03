@@ -17,7 +17,7 @@
   "dependencies": {
     "@apollo/client": "^3.3.20",
     "@tailwindcss/typography": "^0.4.1",
-    "canvas": "^2.8.0",
+    "canvas": "^2.6.1",
     "date-fns": "^2.25.0",
     "dotenv": "^10.0.0",
     "fabric-pure-browser": "^4.6.0",
