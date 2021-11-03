@@ -1,12 +1,10 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import Link from 'next/link';
 import { SearchIcon } from '@heroicons/react/solid';
-import useSite from '../../hooks/use-site';
+// import useSite from '../../hooks/use-site';
 import useSearch, { SEARCH_STATE_LOADED } from '../../hooks/use-search';
 import { postPathBySlug } from '../../lib/posts';
-import { findMenuByLocation, MENU_LOCATION_NAVIGATION_DEFAULT } from '../../lib/menus';
-import NavListItem from '../../components/NavListItem';
-import Home from 'pages';
+// import { findMenuByLocation, MENU_LOCATION_NAVIGATION_DEFAULT } from '../../lib/menus';
 
 const SEARCH_VISIBLE = 'visible';
 const SEARCH_HIDDEN = 'hidden';
@@ -16,13 +14,13 @@ const Nav = () => {
 
   const [searchVisibility, setSearchVisibility] = useState(SEARCH_HIDDEN);
 
-  const { metadata = {}, menus } = useSite();
-  const { title } = metadata;
+  // const { metadata = {}, menus } = useSite();
+  // const { title } = metadata;
 
-  const navigation = findMenuByLocation(menus, [
-    process.env.WORDPRESS_MENU_LOCATION_NAVIGATION,
-    MENU_LOCATION_NAVIGATION_DEFAULT,
-  ]);
+  // const navigation = findMenuByLocation(menus, [
+  //   process.env.WORDPRESS_MENU_LOCATION_NAVIGATION,
+  //   MENU_LOCATION_NAVIGATION_DEFAULT,
+  // ]);
 
   const { query, results, search, clearSearch, state } = useSearch({
     maxResults: 5,

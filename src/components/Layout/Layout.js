@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
 import { Helmet } from 'react-helmet';
-import Link from 'next/link';
 import useSite from '../../hooks/use-site';
 import { helmetSettingsFromMetadata } from '../../lib/site';
 
