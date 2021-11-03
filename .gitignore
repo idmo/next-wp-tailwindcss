@@ -33,5 +33,4 @@ yarn-error.log*
 # vercel
 .vercel
 
-feed.xml
-wp-search.json
+/public
