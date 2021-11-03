@@ -64,7 +64,7 @@ const Metadata = ({ author, date, categories, tags, options = DEFAULT_METADATA_O
           )}
         </li>
       )}
-
+      <div>Tags</div>
       {Array.isArray(tags) && tags[0] && (
         <li>
           {compactTags && (
